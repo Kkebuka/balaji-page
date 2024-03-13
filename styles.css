@@ -16,6 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0px 50px;
+    background-color: rgb(255,250,56);
 }
 
 nav {
@@ -29,6 +30,12 @@ nav > a {
 
 nav > a:hover {
     scale: 1.2;
+}
+
+input {
+    height: 30px;
+    font-size: 1rem;
+    padding-left: 10px;
 }
 
 .popular, .newest, .allProduct {
@@ -94,6 +101,7 @@ h2 {
     text-align: center;
     position: relative;
     top: -100px;
+    color: rgb(6,74,39);
 }
 
 .advert img{
@@ -220,4 +228,10 @@ button {
 
 #nextBtn {
     right: 10px;
+}
+
+i {
+    margin-left: 20px;
+    width: 40px;
+    border: 2px solid red;
 }
