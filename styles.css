@@ -7,16 +7,17 @@ body {
     padding: 0px 50px;
     background-image: url(images/CarouselChatChaska_Front.png);
     background-repeat: repeat;
+    margin: 0px;
 }
 
 header {
     width: 100%;
     display: flex;
-    border: 2px solid red;
     justify-content: space-between;
     align-items: center;
     padding: 0px 50px;
-    background-color: rgb(255,250,56);
+    background-color: rgb(197, 194, 194);
+    margin-bottom: 10px;
 }
 
 nav {
@@ -26,10 +27,12 @@ nav {
 nav > a {
     text-decoration: none;
     color: black;
+    font-size: 1.2rem;
 }
 
 nav > a:hover {
     scale: 1.2;
+    color: aliceblue;
 }
 
 input {
@@ -61,6 +64,7 @@ h4{
     gap: 15px;
 }
 .grid{
+    cursor: pointer;
     overflow: hidden;
     position: relative;
     /* background-color: red; */
@@ -139,6 +143,9 @@ footer{
     width: 100%;
     text-align: center;
     padding: 10px 0px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-top: 1px solid aliceblue;
 }
 
 .one {
@@ -192,46 +199,93 @@ footer{
 .about-div, footer {
     background-color: rgb(202, 193, 193);
 }
-
-
-.carousel {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
+#img1 {
+    background-color: rgb(255,250,56);
+    background-image: url(images/CarouselChatChaska_Front.png);
 }
 
-.carousel-slide {
-    display: flex;
-    overflow: hidden;
+#img2 {
+    background-color: rgb(0,237,255);
+    background-image: url(images/pro2_back.png);
 }
-
-.carousel-slide img {
+.slider {
     width: 100%;
-    height: auto;
-    display: inline-block;
-}
-
-button {
+    /* max-width: 800px; */
+    height: 500px;
+    position: relative;
+    overflow: hidden; /* <===  */
+    border-radius: 15px;
+  }
+  
+  .slide {
+    width: 100%;
+    /* max-width: 800px; */
+    height: 500px;
     position: absolute;
+    transition: all 0.5s;
+  }
+
+   .slide-text {
+    position: absolute;
+    color: red;
+    z-index: 20;
+  }
+
+  .text1 {
+    top: 40%;
+    left: 55%;
+    font-size: 3rem;
+  }
+  .text2 {
+    top: 55%;
+    left: 60%;
+    color: rgb(6,74,39);
+  }
+
+  .slide-text2 {
+    position: absolute;
+    color: greenyellow;
+    z-index: 20;
+  }
+
+  .text3 {
+    top: 35%;
+    left: 20%;
+    font-size: 3rem;
+  }
+  .text4 {
     top: 50%;
-    transform: translateY(-50%);
-    background: gray;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-#prevBtn {
-    left: 10px;
-}
-
-#nextBtn {
-    right: 10px;
-}
-
-i {
-    margin-left: 20px;
+    left: 23%;
+    color: rgb(6,74,39);
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .btn {
+    position: absolute;
     width: 40px;
-    border: 2px solid red;
-}
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+  }
+  .btn:active {
+    transform: scale(1.1);
+  }
+  .btn-prev {
+    top: 45%;
+    left: 2%;
+  }
+  
+  .btn-next {
+    top: 45%;
+    right: 2%;
+  }
