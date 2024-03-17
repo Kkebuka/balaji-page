@@ -2,9 +2,12 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
     scroll-behavior: smooth;
-    padding: 0px 50px;
+    padding: 0px 5%;
     background-image: url(images/CarouselChatChaska_Front.png);
     background-repeat: repeat;
     margin: 0px;
@@ -15,7 +18,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 50px;
+    padding: 0px 10%;
     background-color: rgb(197, 194, 194);
     margin-bottom: 10px;
 }
@@ -24,16 +27,47 @@ nav {
     display: flex;
     gap: 30px;
 }
-nav > a {
+.nav-con a {
+    display: inline-block;
     text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
+    color: #fff;
+    font-size: 1.4rem;
+    /* padding: 5px 10px; */
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 0 1rem;
+    background-color: transparent;
+    position: relative;
+    transition: 1s;
+    overflow: hidden;
+    z-index: 1;
 }
 
-nav > a:hover {
-    scale: 1.2;
-    color: aliceblue;
+.nav-con a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 100%;
+    background-color: #fff;
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+    transition: 1s;
+    z-index: -1;
 }
+
+.nav-con a:hover {
+    /* background-color: #fff; */
+    color: #222;
+    border: 1px solid transparent;
+    scale: 1.1;
+}
+.nav-con a:hover::before {
+    transform: rotate(0deg);
+    scale: 1.2;
+}
+
 
 input {
     height: 30px;
@@ -69,10 +103,18 @@ h4{
     position: relative;
     /* background-color: red; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    scale: 0.8; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 30%;
 }
-
+@keyframes fade-in {
+    from{scale: 0.7; opacity: 0;} 
+    to{scale: 1; opacity: 1;}   
+}
 .grid > h6, p {
-    padding-left: 20px;
+    padding-left: 5%;
     margin-top: 0px;
 }
 h6 {
@@ -288,4 +330,78 @@ footer{
   .btn-next {
     top: 45%;
     right: 2%;
+  }
+
+
+
+  @media (max-width:1000px) {
+    h1{
+        font-size: 1.4rem;
+    }
+    .slider {
+        height: 350px;
+      }
+      
+      .slide {
+        height: 350px;
+      }
+      .advert {
+        height: 350px;
+     }
+  }
+  @media(max-width: 650px) {
+    .slide-text, .slide-text2{
+        font-size: 1.5rem;
+    }
+    .slider {
+        height: 200px;
+      }
+      
+      .slide {
+        height: 200px;
+      }
+      .advert {
+        height: 250px;
+     }
+     .pop-con {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto ;
+        grid-template-rows: auto auto  auto auto;
+        gap: 15px;
+    }
+    .new-grid, .all-grid {
+        display: grid;
+        grid-template-columns: auto auto ;
+        grid-template-rows: auto auto;
+        gap: 15px;
+    }
+    .about-div {
+        display: grid;
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto 30%;
+        text-align: center;
+        gap: 20px;
+    }
+    h2 {
+        text-align: center;
+        position: relative;
+        top: -60px;
+        color: rgb(6,74,39);
+        font-size: 1.3rem;
+    }
+    .nav-con, .search-con{
+        display: none;
+    }
+    .grid > h6, p {
+        padding-left: 5%;
+        margin-top: 0px;
+        font-size: 0.75rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+    .logo{
+        width: 40px;
+    }
   }
