@@ -30,7 +30,7 @@ nav {
 .nav-con a {
     display: inline-block;
     text-decoration: none;
-    color: #fff;
+    color: rgb(70, 67, 65);
     font-size: 1.4rem;
     /* padding: 5px 10px; */
     border: 1px solid transparent;
