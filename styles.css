@@ -377,6 +377,46 @@ footer{
       .advert {
         height: 350px;
      }
+     .text1 {
+        /* top: 35%; */
+        /* left: 45%; */
+        font-size: 2.5rem;
+        /* font-weight: 700; */
+        /* font-family: 'Archer 400', sans-serif; */
+        /* color: rgb(6,74,39); */
+      }
+      .text2 {
+        /* top: 55%; */
+        /* left: 50%; */
+        /* color: rgb(6,74,39); */
+        /* font-family: 'Archer Italic 300', sans-serif; */
+        font-size: 1.8rem;
+        font-weight: 100;
+      }
+     .text3 {
+        top: 30%;
+        left: 17%;
+        font-size: 2.5rem;
+        font-family: 'Archer italic 300', sans-serif;
+        color: rgb(0,87,135);
+      }
+      .text4 {
+        top: 55%;
+        left: 23%;
+        color: rgb(6,74,39);
+        font-family: 'Archer', sans-serif;
+        color: rgb(0,87,135);
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+      .text5 {
+        top: 70%;
+        left: 17%;
+        color: rgb(255,255,255);
+        font-family: 'Archer', sans-serif;
+        font-size: 1.7rem;
+        font-weight: 200;
+      }
   }
   @media(max-width: 650px) {
     .slide-text, .slide-text2{
