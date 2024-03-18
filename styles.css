@@ -275,34 +275,50 @@ footer{
     position: absolute;
     color: red;
     z-index: 20;
+    
+                                                
   }
 
   .text1 {
-    top: 40%;
-    left: 55%;
-    font-size: 3rem;
+    top: 35%;
+    left: 45%;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: 'Archer 400', sans-serif;
+    color: rgb(6,74,39);
   }
   .text2 {
     top: 55%;
-    left: 60%;
+    left: 50%;
     color: rgb(6,74,39);
+    font-family: 'Archer Italic 300', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 100;
   }
 
   .slide-text2 {
     position: absolute;
     color: greenyellow;
     z-index: 20;
+    /* font-family: 'Archer', sans-serif; */
+
   }
 
   .text3 {
-    top: 35%;
-    left: 20%;
-    font-size: 3rem;
+    top: 30%;
+    left: 17%;
+    font-size: 3.5rem;
+    font-family: 'Archer italic 300', sans-serif;
+    color: rgb(0,114,157);
   }
   .text4 {
-    top: 50%;
+    top: 55%;
     left: 23%;
     color: rgb(6,74,39);
+    font-family: 'Archer', sans-serif;
+    color: rgb(0,87,135);
+    font-size: 2.5rem;
+    font-weight: 400;
   }
   
   .slide img {
