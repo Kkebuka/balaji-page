@@ -54,7 +54,7 @@ const navMenu = document.querySelector(".nav-con");
 hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
-  console.log('working')
+
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
 }
